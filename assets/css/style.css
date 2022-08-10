@@ -1,0 +1,44 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+nav {
+    z-index: 1;
+    position:absolute;
+    padding-top: 20px;
+    padding-left: 20px;
+    color: antiquewhite;
+}
+
+ul {
+    list-style-type: none;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -100;
+}
+
+.content {
+    padding-top: 40%;
+}
+
+.content h1 {
+    color: antiquewhite;
+    font-size: 100px;
+}
