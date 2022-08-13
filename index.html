@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Educ University</title>
+    <title>SAT</title>
 
     <!-- fontawesome icons -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
@@ -25,23 +25,120 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-	<header>
+	<header style="height: 100vh;">
         <nav>
             <ul>
                 <li>Home</li>
                 <li>Courses</li>
+                <li>About</li>
             </ul>
         </nav>
-        <div class="container">
-            
+        <div id="video-wrapper" class="container">
 			<video autoplay muted loop id="myVideo">
                 <source src="./assets/images/abstract-background.mp4" type="video/mp4">
             </video>
-            <div class="content text-center">
-                <h1>Art and Tech</h1>
+            <div id="header-text" class="content text-center">
+                <h1>School of</h1>
+                <h1>Arts and Tech</h1>
             </div>
         </div>
-            
-	</header>	
+	</header>
+
+
+    <div class="container py-5">
+        <h2 class="py-5">Featured work of our students</h2>
+        <div class="image-gallery">
+            <div class="column">
+                <div class="image-item">
+                    <img src="./assets/images/axel-ruffini-1.jpg" alt="" />
+                    <div class="overlay"><span>&copy; axel ruffini</span></div>
+                </div>
+                <div class="image-item">
+                    <img src="./assets/images/erick-butler-1.jpg" alt="" />
+                    <div class="overlay"><span>&copy; erick butler</span></div>
+                </div>
+                <div class="image-item">
+                    <img src="./assets/images/mo.jpg" alt="" />
+                    <div class="overlay"><span>&copy; mo</span></div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="image-item">
+                    <img src="./assets/images/polina-kondrashova-3.jpg" alt="" />
+                    <div class="overlay"><span>&copy; polina kondrashova</span></div>
+                    </div>
+                <div class="image-item">
+                    <img src="./assets/images/europeana-2.jpg" alt="" />
+                    <div class="overlay"><span>&copy; europeana</span></div>
+                </div>
+                <div class="image-item">
+                    <img src="./assets/images/note-thanun-1.jpg" alt="" />
+                    <div class="overlay"><span>&copy; note thanun</span></div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="image-item">
+                    <img src="./assets/images/philipp-potocnik-2.jpg" alt="" />
+                    <div class="overlay"><span>&copy; philipp potocnik</span></div>
+                </div>
+                <div class="image-item">
+                    <img src="./assets/images/simon-lee-1.jpg" alt="" />
+                    <div class="overlay"><span>&copy; simon lee</span></div>
+                </div>
+                <div class="image-item">
+                    <img src="./assets/images/milad-fakurian.jpg" alt="" />
+                    <div class="overlay"><span>&copy; milad fakurian</span></div>
+                </div>
+            </div>
+          </div>
+    </div>
+
+    <div class="container-fluid" style="background-color: darkgray;">
+        <div class="container py-5">
+            <h2>Our Courses</h2>
+            <p>Choose your study program and develop your creativity alongside top professionals</p>
+    
+            <div class="row">
+                <!-- card 1 -->
+                <div class="col-md-4 my-3">
+                    <div class="card text-white text-center">
+                      <img class="card-img-top" src="./assets/images/game-dev-and-im.jpg" alt="Card image cap">
+                      <div class="card-img-overlay">
+                        <h5 class="card-title py-5">Interactive Design and Game Development</h5>
+                      </div>
+                    </div>
+                </div>
+                <!-- card 2 -->
+                <div class="col-md-4 my-3">
+                    <div class="card text-white text-center">
+                        <img class="card-img-top" src="./assets/images/graphic-design.jpg" alt="Card image cap">
+                        <div class="card-img-overlay">
+                          <h5 class="card-title py-5">Graphic Design</h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 3 -->
+                <div class="col-md-4 my-3">
+                    <div class="card text-white text-center">
+                        <img class="card-img-top" src="./assets/images/see-more.jpg" alt="Card image cap">
+                        <div class="card-img-overlay">
+                          <h5 class="card-title py-5"><button type="button" class="btn btn-light"><a href="">See more</a></button></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+
+    <div class="container">
+        <h2 class="my-5">Connect with us!</h2>
+
+    </div>
+    <footer>
+
+    </footer>
+
 </body>
 </html>
