@@ -19,21 +19,23 @@
         </ul>
     </nav>
 
-    <main class="container my-5">
-        <div id="adminButton" class="row"></div>
-        
-        <!-- cards start -->
-        <div id="courseContainer" class="row d-flex justify-content-center align-items-center">
-            <div class="col-md-12">
-                <section class="jumbotron text-center my-5">
-                    <h2 class="my-5"><span class="spinner-border text-info"></span> Fetching courses...</h2>
-                </section>
-            </div>
-        </div>
-        <!-- cards end -->
-    </main>
+    <div class="container my-5">
+		<h2 class="text-center my-5">Create New Course</h2>
+		<form id="createCourse">
+			<div class="form-row">
+				<div class="form-group col-md-9">
+					<input type="text" id="courseName" class="form-control" placeholder="Course Name">
+				</div>
+				<div class="form-group col-md-3">
+					<input type="number" id="coursePrice" class="form-control" placeholder="Course Price">
+				</div>
+			</div>
+			<input type="text" id="courseDescription" class="form-control" placeholder="Course Description">
+			<button type="submit" class="btn btn-block btn-info my-3"> Create Course </button>
+		</form>
+	</div>
 
-    <script src="./../assets/js/courses.js"></script>
-    
+    <script src="./../assets/js/addCourse.js"></script>
+
 </body>
 </html>
