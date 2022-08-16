@@ -10,19 +10,27 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
     <!-- external css -->
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./../assets/css/style.css">
 </head>
 <body>
-
-    <div class="container my-5 py-5">
+    <nav>
+        <ul>
+            <li><a href="./../index.html">Home</a></li>
+        </ul>
+    </nav>
+    <div class="container my-5">
         <div class="row justify-content-center">
             <div class="col-md-5">
                 <div class="card">
-                    <h2 class="card-title text-center">Register</h2>
+                    <h2 class="card-title text-center py-2">Register</h2>
                     <div class="card-body py-md-4">
-                        <form action="">
+
+                        <form id="registerForm">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="name" placeholder="Name">
+                                <input type="text" class="form-control" id="firstName" placeholder="First Name">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="lastName" placeholder="Last Name">
                             </div>
                             <div class="form-group">
                                 <input type="email" class="form-control" id="email" placeholder="Email">
@@ -31,15 +39,23 @@
                                 <input type="password" class="form-control" id="password" placeholder="Password">
                             </div>
                             <div class="form-group">
-                                <input type="password" class="form-control" id="confirm-password" placeholder="Confirm Password">
+                                <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
+                            </div>
+                            <div class="text-center py-2">
+                                <button type="submit" class="btn btn-primary">Create Account</button>
                             </div>
                         </form>
-                        <button class="btn btn-primary">Create Account</button>
+
+                    </div>
+                    <div class="text-center py-3">
+                        <p>Already have an account? <a href="./login.html">Login</a></p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script src="./../assets/js/register.js"></script>
     
 </body>
 </html>

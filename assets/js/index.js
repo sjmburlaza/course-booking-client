@@ -1,6 +1,6 @@
-let loginNav = document.querySelector("#loginBtn");
-let registerNav = document.querySelector("#registerBtn");
-let userToken = localStorage.getItem("token");
+let loginNav = document.querySelector('#loginBtn');
+let registerNav = document.querySelector('#registerBtn');
+let userToken = localStorage.getItem('token');
 
 if (!userToken) {
     loginNav.innerHTML = 
