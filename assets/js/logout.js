@@ -1,5 +1,5 @@
-//clear your local storage
+//clears local storage
 localStorage.clear();
 
-//redirect to the login oage
+//redirect to the login page
 window.location.replace('./login.html')

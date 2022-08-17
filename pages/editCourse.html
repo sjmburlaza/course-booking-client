@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAT</title>
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- external css -->
+    <link rel="stylesheet" href="./../assets/css/style.css">
+</head>
+<body>
+    <nav id="globalNav">
+        <ul>
+            <li><a href="./../index.html">Home</a></li>
+            <li><a href="./../pages/courses.html">Courses</a></li>
+        </ul>
+    </nav>
+
+    <div class="container my-5">
+		<h2 class="text-center my-5">Edit Course</h2>
+		<form id="editCourse">
+			<div class="form-row">
+				<div class="form-group col-md-9">
+					<input type="text" id="courseName" class="form-control" placeholder="Course Name">
+				</div>
+				<div class="form-group col-md-3">
+					<input type="number" id="coursePrice" class="form-control" placeholder="Course Price">
+				</div>
+			</div>
+			<input type="text" id="courseDescription" class="form-control" placeholder="Course Description">
+            <button type="reset" class="btn btn-info my-3"> Reset </button>
+			<button type="submit" class="btn btn-info my-3"> Submit </button>
+		</form>
+	</div>
+
+    <script src="./../assets/js/editCourse.js"></script>
+
+</body>
+</html>
