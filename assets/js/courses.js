@@ -1,4 +1,6 @@
 let adminUser = localStorage.getItem('isAdmin');
+// let userToken = localStorage.getItem('token');
+console.log(userToken)
 
 let cardFooter;
 
@@ -7,27 +9,34 @@ fetch('https://course-booking-v2.herokuapp.com/api/courses')
 .then(res => res.json())
 .then(data => {
     let courseData;
+    console.log(data)
 
     if (data.length < 1) {
         courseData = 'No courses available.'
     } else {
         courseData = data.map(course => {
-            if (!adminUser || adminUser === 'false') {
-                cardFooter = 
-                `
-                <a href="./course.html?courseId=${course._id}"value="{course.id}" class="btn btn-info text-white btn-block editButton">
-					Select Course
-				</a>
-                `
+            if (!userToken) {
+                cardFooter = null;
             } else {
-                cardFooter =
-                `
-					<a href="./enrollees.html?courseId=${course._id}"value="{course._id}" class="btn btn-info text-white btn-block dangerButton">Enrollees</a>
-					<a href="./editCourse.html?courseId=${course._id}"value="{course._id}" class="btn btn-warning text-white btn-block editButton">Edit</a>
-					<a href="./deleteCourse.html?courseId=${course._id}"value="{course._id}" class="btn btn-danger text-white btn-block dangerButton">Disable</a>
-				`
+                if (!adminUser || adminUser === 'false') {
+                    cardFooter = 
+                    `
+                    <a href="./course.html?courseId=${course._id}"value="{course.id}" class="btn btn-info text-white btn-block editButton">
+                        Select Course
+                    </a>
+                    `
+                } else {
+                    cardFooter =
+                    `
+                    <div class="text-center">
+                        <a href="./enrollees.html?courseId=${course._id}"value="{course._id}" class="btn btn-info card-button">Enrollees</a>
+                        <a href="./editCourse.html?courseId=${course._id}"value="{course._id}" class="btn btn-warning card-button">Edit</a>
+                        <a href="./deleteCourse.html?courseId=${course._id}"value="{course._id}" class="btn btn-danger card-button">Disable</a>
+                    </div>
+                    `
+                }
             }
-
+            
             return(
                 `
                 <div class="col-md-6 my-3">
@@ -53,18 +62,18 @@ fetch('https://course-booking-v2.herokuapp.com/api/courses')
 //add modal - if user is an admin, there will be a button to add a course
 let modalButton = document.querySelector("#adminButton")
 
-if(adminUser === false || !adminUser) {
+if(adminUser === 'false' || !adminUser) {
 	//if user is regular user, do not show add course button
 	modalButton.innerHTML = null
 } else {
 	//display add course if user is an admin
 	modalButton.innerHTML =
 	`
-		<div class="col-md-2 offset-md-10 my-1">
-			<a href="./addCourse.html" class="btn btn-block btn-info">Add Course</a>
+		<div class="col-md-3 offset-md-9 my-1">
+			<a href="./addCourse.html" class="btn btn-block btn-info">Create New Course</a>
 		</div>
-		<div class="col-md-2 offset-md-10 my-1">
-			<a href="./archive.html" class="btn btn-block btn-danger">Archive</a>
+		<div class="col-md-3 offset-md-9 my-1">
+			<a href="./archive.html" class="btn btn-block btn-danger">Archived Courses</a>
 		</div>
 	`
 }

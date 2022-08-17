@@ -11,7 +11,6 @@ addCourse.addEventListener('submit', (e) => {
 
 	let token = localStorage.getItem('token');
 
-
 	fetch('https://course-booking-v2.herokuapp.com/api/courses', {
         method: 'POST',
         headers: {
@@ -24,22 +23,18 @@ addCourse.addEventListener('submit', (e) => {
             price: price
         })
     })
-    .then(res => {
-        res.json();
-    })
+    .then(res => res.json())
     .then(data => {
         console.log(data);
-        window.location.replace("./courses.html");
 
         //creation of new course successful
-        // if(data == true) {
-        //     //redirect to course page
-        //     alert('Course succesfully created!')
-        //     window.location.replace("./courses.html")
-        // } else {
-        //     //redirect in creating course
-        //     alert("Something went wrong.")
-        //     window.location.replace("./courses.html")
-        // }
+        if(data == true) {
+            //redirect to course page
+            alert('Course succesfully created!');
+            window.location.replace("./courses.html");
+        } else {
+            //redirect in creating course
+            alert("Something went wrong.");
+        }
     })
 })

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SAT</title>
-
+    
     <!-- bootstrap css -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
@@ -16,29 +16,21 @@
     <nav id="globalNav">
         <ul>
             <li><a href="./../index.html">Home</a></li>
-            <li><a href="./logout.html">Logout</a></li>
+            <li><a href="./../pages/courses.html">Courses</a></li>
         </ul>
-
     </nav>
+    
+    <div class="container">
+        <h2 id="courseName"></h2>
+        <p id="courseDescription"></p>
 
-    <main class="container my-5">
-        <div id="adminButton" class="row"></div>
-        
-        <!-- cards start -->
-        <div id="courseContainer" class="row d-flex justify-content-center align-items-center">
-            <div class="col-md-12">
-                <section class="jumbotron text-center my-5">
-                    <h2 class="my-5"><span class="spinner-border text-info"></span> Fetching courses...</h2>
-                </section>
-            </div>
-        </div>
-        <!-- cards end -->
-    </main>
+        <div id="enrolleesContainer"></div>
+    </div>
 
     <!-- global script -->
     <script src="./../assets/js/nav.js"></script>
 
-    <script src="./../assets/js/courses.js"></script>
+    <script src="./../assets/js/enrollees.js"></script>
     
 </body>
 </html>

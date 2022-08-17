@@ -6,14 +6,13 @@ if (!userToken) {
     navSession.innerHTML = 
     `
     <li>
-        <a href="./pages/login.html">Login</a>
+        <a href="./login.html">Login</a>
     </li>
-        
     `
     // registerNav.innerHTML =
     // `
     // <li>
-    //     <a href="./pages/register.html">Sign-up</a>
+    //     <a href="./register.html">Sign-up</a>
     // </li>
     // `
 
@@ -21,7 +20,7 @@ if (!userToken) {
     navSession.innerHTML = 
     `
     <li>
-        <a href="./pages/logout.html">Logout</a>
+        <a href="./logout.html">Logout</a>
     </li>
     `
 }
