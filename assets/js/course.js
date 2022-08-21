@@ -20,7 +20,7 @@ fetch(`https://course-booking-v2.herokuapp.com/api/courses/${courseId}`)
     courseDescription.innerHTML = data.description;
     enrollContainer.innerHTML =
         `
-        <button id="enrollButton" class="btn btn-block btn-info">
+        <button id="enrollButton" class="btn btn-info">
             Enroll
         </button>
         `
