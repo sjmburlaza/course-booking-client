@@ -22,19 +22,17 @@ loginForm.addEventListener('submit', (e) => {
         .then(res => res.json())
         .then(data => {
             if (data.accessToken) {
-                console.log(data.accessToken)
 
                 localStorage.setItem('token', data.accessToken);
 
                 // send fetch request to decode JWT and obtain user ID and role for storing in context
                 fetch('https://course-booking-v2.herokuapp.com/api/users/details', {
                     headers: {
-                        token: `Bearer ${data.accessToken}`
+                        'token': `Bearer ${data.accessToken}`
                     }
                 })
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data)
 
                     localStorage.setItem('id', data._id);
                     localStorage.setItem('isAdmin', data.isAdmin);

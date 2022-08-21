@@ -20,7 +20,6 @@ fetch(`https://course-booking-v2.herokuapp.com/api/courses/${courseId}`, {
     }
 })
 .then(data => {
-    console.log(data)
 
     if(data === false) {
         alert('Course succesfully enabled!');

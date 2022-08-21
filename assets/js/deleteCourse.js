@@ -16,7 +16,7 @@ fetch(`https://course-booking-v2.herokuapp.com/api/courses/${courseId}`, {
 })
 .then(res => res.json())
 .then(data => {
-    console.log(data)
+    
     //deletion course successful
     if(data === true) {
         //redirect to course page

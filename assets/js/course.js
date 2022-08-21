@@ -3,8 +3,6 @@ let courseId = params.get('courseId');
 let token = localStorage.getItem('token');
 let userId = localStorage.getItem('id');
 
-console.log(userId)
-
 let courseName = document.querySelector('#courseName');
 let courseDescription = document.querySelector('#courseDescription');
 let coursePrice = document.querySelector('#coursePrice');
@@ -13,7 +11,6 @@ let enrollContainer = document.querySelector('#enrollContainer');
 fetch(`https://course-booking-v2.herokuapp.com/api/courses/${courseId}`)
 .then(res => res.json())
 .then(data => {
-    console.log(data)
 
     courseName.innerHTML = data.name;
     coursePrice.innerHTML = data.price;
@@ -42,7 +39,6 @@ fetch(`https://course-booking-v2.herokuapp.com/api/courses/${courseId}`)
             })
             .then(res => res.json())
             .then(data => {
-                console.log(data)
                 if (data === true) {
                     alert('Thank you for enrolling! See you!');
                     window.location.replace('./courses.html');

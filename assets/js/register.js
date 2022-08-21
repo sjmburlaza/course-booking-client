@@ -21,7 +21,6 @@ registerForm.addEventListener('submit', (e) => {
         })
         .then(res => res.json())
         .then(data => {
-            // console.log(data)
             if (data === false) {
                 fetch('https://course-booking-v2.herokuapp.com/api/users/register', {
                     method: 'POST',

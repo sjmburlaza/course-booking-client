@@ -11,7 +11,6 @@ function getOriginalValue() {
     fetch(`https://course-booking-v2.herokuapp.com/api/courses/${courseId}`)
     .then(res => res.json())
     .then(data => {
-        console.log(data)
         courseName.value = data.name;
         courseDescription.value = data.description;
         coursePrice.value = data.price;
@@ -48,8 +47,6 @@ editCourse.addEventListener('submit', (e) => {
     .then(res => res.json())
     .then(data => {
 
-        console.log(data)
-
         //editing of old course successful
         if(data === true) {
             //redirect to course page
@@ -62,6 +59,5 @@ editCourse.addEventListener('submit', (e) => {
         }
     })
 })
-
 
 editCourse.addEventListener('reset', getOriginalValue);

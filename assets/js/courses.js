@@ -1,7 +1,4 @@
 let adminUser = localStorage.getItem('isAdmin');
-// let userToken = localStorage.getItem('token');
-console.log(userToken)
-
 let cardFooter;
 
 // fetch request to all available courses
@@ -9,7 +6,6 @@ fetch('https://course-booking-v2.herokuapp.com/api/courses')
 .then(res => res.json())
 .then(data => {
     let courseData;
-    console.log(data)
 
     if (data.length < 1) {
         courseData = 'No courses available.'
@@ -36,23 +32,40 @@ fetch('https://course-booking-v2.herokuapp.com/api/courses')
                     `
                 }
             }
-            
-            return(
-                `
-                <div class="col-md-6 my-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">${course.name}</h5>
-                            <p class="card-text text-left">${course.description}</p>
-                            <p class="card-text text-right">Price: ₱${course.price}</p>
-                        </div>
-                        <div class="card-footer">
-                            ${cardFooter}
+
+            if (cardFooter) {
+                return(
+                    `
+                    <div class="col-md-6 my-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">${course.name}</h5>
+                                <p class="card-text text-left">${course.description}</p>
+                                <p class="card-text text-right">Price: ₱${course.price}</p>
+                            </div>
+                            <div class="card-footer">
+                                ${cardFooter}
+                            </div>
                         </div>
                     </div>
-                </div>
-                `
-            )
+                    `
+                )
+            } else {
+                return(
+                    `
+                    <div class="col-md-6 my-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">${course.name}</h5>
+                                <p class="card-text text-left">${course.description}</p>
+                                <p class="card-text text-right">Price: ₱${course.price}</p>
+                            </div>
+                        </div>
+                    </div>
+                    `
+                )
+            }
+            
         }).join('');
     }
     let coursesContainer = document.querySelector('#coursesContainer');

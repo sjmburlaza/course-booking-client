@@ -3,8 +3,6 @@ let addCourse = document.querySelector('#createCourse');
 addCourse.addEventListener('submit', (e) => {
 	e.preventDefault()
 
-    console.log('submit')
-
 	let name = document.querySelector('#courseName').value;
 	let description = document.querySelector('#courseDescription').value;
 	let price = document.querySelector('#coursePrice').value;
@@ -25,7 +23,7 @@ addCourse.addEventListener('submit', (e) => {
     })
     .then(res => res.json())
     .then(data => {
-        console.log(data);
+        // console.log(data);
 
         //creation of new course successful
         if(data == true) {
