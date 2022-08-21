@@ -31,7 +31,7 @@ editCourse.addEventListener('submit', (e) => {
 	let token = localStorage.getItem('token');
 
 
-	fetch(`https://secure-hollows-44036.herokuapp.com/api/courses`, {
+	fetch(`https://course-booking-v2.herokuapp.com/api/courses`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
@@ -46,6 +46,8 @@ editCourse.addEventListener('submit', (e) => {
     })
     .then(res => res.json())
     .then(data => {
+
+        // console.log(data)
 
         //editing of old course successful
         if(data === true) {
