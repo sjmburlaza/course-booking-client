@@ -11,34 +11,36 @@
 
     <!-- external css -->
     <link rel="stylesheet" href="./../assets/css/style.css">
+
 </head>
 <body>
+
     <nav id="globalNav">
         <ul>
             <li><a href="./../index.html">Home</a></li>
-            <li><a href="./userProfile.html">Profile</a></li>
             <li><a href="./logout.html">Logout</a></li>
         </ul>
     </nav>
 
-    <main class="container my-5">
-        <div id="adminButton" class="row"></div>
-        
-        <!-- cards start -->
-        <div id="coursesContainer" class="row d-flex justify-content-center align-items-center">
-            <div class="col-md-12">
-                <section class="jumbotron text-center my-5">
-                    <h2 class="my-5"><span class="spinner-border text-info"></span> Fetching courses...</h2>
-                </section>
-            </div>
-        </div>
-        <!-- cards end -->
-    </main>
+    <div class="container text-left">
+		<div class="row">		
+			<div class="col-md-12">
+				<section class="jumbotron">
+					<!-- <img id="profile-image" src="./../assets/images/profile-placeholder.png" width=200px/> -->
+					<div class="my-5">
+					 	<h2>Name: <span id="firstName"></span> <span id="lastName"></span></h2>
+						<h5>Email: <span id="email" class="lead"></span></h5>
+					</div>
+					<div id="coursesContainer"></div>
+				</section>
+			</div>
+		</div>
+	</div>
 
     <!-- global script -->
     <script src="./../assets/js/nav.js"></script>
 
-    <script src="./../assets/js/courses.js"></script>
+    <script src="./../assets/js/userProfile.js"></script>
     
 </body>
 </html>

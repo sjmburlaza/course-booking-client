@@ -55,8 +55,8 @@ fetch('https://course-booking-v2.herokuapp.com/api/courses')
             )
         }).join('');
     }
-    let courseContainer = document.querySelector('#courseContainer');
-    courseContainer.innerHTML = courseData;
+    let coursesContainer = document.querySelector('#coursesContainer');
+    coursesContainer.innerHTML = courseData;
 })
 
 //add modal - if user is an admin, there will be a button to add a course

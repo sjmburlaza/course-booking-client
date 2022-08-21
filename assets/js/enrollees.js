@@ -16,7 +16,7 @@ fetch(`https://course-booking-v2.herokuapp.com/api/courses/${courseId}`)
     coursePrice.innerHTML = data.price;
     courseDescription.innerHTML = data.description;
 
-    let enrollees = data.enrollees;
+    const enrollees = data.enrollees;
 
     if (enrollees.length < 1) {
         enrolleesContainer.innerHTML = 'No enrollees yet.'
