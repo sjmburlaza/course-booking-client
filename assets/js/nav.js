@@ -8,7 +8,6 @@ if (!userToken) {
     <ul>
         <li><a href="./../index.html">Home</a></li>
         <li><a href="./../pages/courses.html">Courses</a></li>
-        <a href="./login.html">Login</a>
     </ul>
     `
 
