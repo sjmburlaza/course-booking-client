@@ -1,8 +1,9 @@
 let adminUser = localStorage.getItem('isAdmin');
 let cardFooter;
+let cardBody;
 
 // fetch request to all available courses
-fetch('https://course-booking-v2.herokuapp.com/api/courses')
+fetch('http://localhost:4000/api/courses')
 .then(res => res.json())
 .then(data => {
     let courseData;
@@ -11,8 +12,15 @@ fetch('https://course-booking-v2.herokuapp.com/api/courses')
         courseData = 'No courses available.'
     } else {
         courseData = data.map(course => {
+            console.log(course)
+
             if (!userToken) {
-                cardFooter = null;
+                cardFooter = 
+                `
+                    <a href="./courseDetails.html?courseId=${course._id}"value="{course.id}" class="btn btn-info text-white btn-block editButton">
+                        Course Details
+                    </a>
+                `
             } else {
                 if (!adminUser || adminUser === 'false') {
                     cardFooter = 
@@ -33,15 +41,16 @@ fetch('https://course-booking-v2.herokuapp.com/api/courses')
                 }
             }
 
-            if (cardFooter) {
+            if (userToken && cardFooter) {
                 return(
                     `
                     <div class="col-md-6 my-3">
                         <div class="card">
+                            <img class="card-img-top" src="${course.image}" alt="Card image cap">
                             <div class="card-body">
-                                <h5 class="card-title">${course.name}</h5>
+                                <h3 class="card-title">${course.name}</h3>
                                 <p class="card-text text-left">${course.description}</p>
-                                <p class="card-text text-right">Price: ₱${course.price}</p>
+                                <p class="card-text text-left">Price: ₱${course.price}</p>
                             </div>
                             <div class="card-footer">
                                 ${cardFooter}
@@ -55,10 +64,12 @@ fetch('https://course-booking-v2.herokuapp.com/api/courses')
                     `
                     <div class="col-md-6 my-3">
                         <div class="card">
+                            <img class="card-img-top" src="${course.image}" alt="Card image cap">
                             <div class="card-body">
-                                <h5 class="card-title">${course.name}</h5>
-                                <p class="card-text text-left">${course.description}</p>
-                                <p class="card-text text-right">Price: ₱${course.price}</p>
+                                <h3 class="card-title">${course.name}</h3>
+                            </div>
+                            <div class="card-footer">
+                                ${cardFooter}
                             </div>
                         </div>
                     </div>

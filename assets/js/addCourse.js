@@ -6,10 +6,11 @@ addCourse.addEventListener('submit', (e) => {
 	let name = document.querySelector('#courseName').value;
 	let description = document.querySelector('#courseDescription').value;
 	let price = document.querySelector('#coursePrice').value;
+    let image = document.querySelector('#courseImage').value;
 
 	let token = localStorage.getItem('token');
 
-	fetch('https://course-booking-v2.herokuapp.com/api/courses', {
+	fetch('http://localhost:4000/api/courses', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -18,7 +19,8 @@ addCourse.addEventListener('submit', (e) => {
         body: JSON.stringify({
             name: name,
             description: description,
-            price: price
+            price: price,
+            image: image
         })
     })
     .then(res => res.json())

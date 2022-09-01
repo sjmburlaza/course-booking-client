@@ -10,7 +10,7 @@ registerForm.addEventListener('submit', (e) => {
 	let confirmPassword = document.querySelector("#confirmPassword").value;
 
     if ((password !== '' && confirmPassword  !== '') && (confirmPassword === password)) {
-        fetch('https://course-booking-v2.herokuapp.com/api/users/email-exists', {
+        fetch('http://localhost:4000/api/users/email-exists', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -22,7 +22,7 @@ registerForm.addEventListener('submit', (e) => {
         .then(res => res.json())
         .then(data => {
             if (data === false) {
-                fetch('https://course-booking-v2.herokuapp.com/api/users/register', {
+                fetch('http://localhost:4000/api/users/register', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
