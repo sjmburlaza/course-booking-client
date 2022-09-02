@@ -14,7 +14,7 @@ fetch(`https://course-booking-v2.herokuapp.com/api/courses/${courseId}`)
 .then(data => {
 
     courseName.innerHTML = data.name;
-    coursePrice.innerHTML = data.price;
+    coursePrice.innerHTML = `Price: ₱ ${data.price}`;
     courseDescription.innerHTML = data.description;
     courseImage.innerHTML =
     `
