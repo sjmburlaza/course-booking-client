@@ -24,7 +24,7 @@ fetch(`https://course-booking-v2.herokuapp.com/api/courses/${courseId}`)
     if (token) {
         enrollContainer.innerHTML =
         `
-        <button id="enrollButton" class="btn btn-info">
+        <button id="enrollButton" class="btn btn-info mt-3">
             Enroll
         </button>
         `
@@ -61,7 +61,7 @@ fetch(`https://course-booking-v2.herokuapp.com/api/courses/${courseId}`)
     } else {
         enrollContainer.innerHTML =
         `
-            <a href="./login.html" class="btn btn-info">
+            <a href="./login.html" class="btn btn-info mt-3">
                 Login to enroll
             </a>
         `

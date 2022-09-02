@@ -28,8 +28,9 @@ ul {
     color: antiquewhite;
 }
 
-#indexNav a:hover {
-    color: cadetblue;
+#indexNav a:hover,
+#globalNav a:hover {
+    color: cadetblue !important;
 }
 
 #globalNav a:link,
@@ -38,9 +39,13 @@ ul {
     color: black;
 }
 
-#indexNav a:hover {
-    color: cadetblue;
+a {
+    text-decoration: none !important;
 }
+
+/* #indexNav a:hover {
+    color: cadetblue;
+} */
 
 .video-wrapper {
     width: 100vw;
