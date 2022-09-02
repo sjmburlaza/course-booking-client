@@ -9,7 +9,7 @@ let lastName = document.querySelector("#lastName");
 let email = document.querySelector("#email");
 let enrollmentsContainer = document.querySelector("#coursesContainer");
 
-fetch(`http://localhost:4000/api/users/details`, {
+fetch(`https://course-booking-v2.herokuapp.com/api/users/details`, {
 	method: 'GET',
 	headers: {
 		'Content-Type': 'application/json',
@@ -30,7 +30,7 @@ fetch(`http://localhost:4000/api/users/details`, {
     }
 
     for(let subject of enrollments){
-        fetch(`http://localhost:4000/api/courses/${subject.courseId}`)
+        fetch(`https://course-booking-v2.herokuapp.com/api/courses/${subject.courseId}`)
         .then(res => res.json())
         .then(data =>{
 

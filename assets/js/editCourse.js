@@ -9,7 +9,7 @@ let courseImage = document.querySelector('#courseImage');
 
 
 function getOriginalValue() {
-    fetch(`http://localhost:4000/api/courses/${courseId}`)
+    fetch(`https://course-booking-v2.herokuapp.com/api/courses/${courseId}`)
     .then(res => res.json())
     .then(data => {
         courseName.value = data.name;
@@ -34,7 +34,7 @@ editCourse.addEventListener('submit', (e) => {
 	let token = localStorage.getItem('token');
 
 
-	fetch(`http://localhost:4000/api/courses`, {
+	fetch(`https://course-booking-v2.herokuapp.com/api/courses`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',

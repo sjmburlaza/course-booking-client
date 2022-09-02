@@ -9,7 +9,7 @@ loginForm.addEventListener('submit', (e) => {
     if (email === '' || password === '') {
         alert('Please input you email and/or password');
     } else {
-        fetch('http://localhost:4000/api/users/login', {
+        fetch('https://course-booking-v2.herokuapp.com/api/users/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -26,7 +26,7 @@ loginForm.addEventListener('submit', (e) => {
                 localStorage.setItem('token', data.accessToken);
 
                 // send fetch request to decode JWT and obtain user ID and role for storing in context
-                fetch('http://localhost:4000/api/users/details', {
+                fetch('https://course-booking-v2.herokuapp.com/api/users/details', {
                     headers: {
                         'token': `Bearer ${data.accessToken}`
                     }

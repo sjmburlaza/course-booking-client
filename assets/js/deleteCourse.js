@@ -3,7 +3,7 @@ let courseId = params.get('courseId')
 let token = localStorage.getItem('token')
 
 
-fetch(`http://localhost:4000/api/courses/${courseId}`, {
+fetch(`https://course-booking-v2.herokuapp.com/api/courses/${courseId}`, {
     method: 'DELETE',
     headers: {
         'Content-Type': 'application/json',

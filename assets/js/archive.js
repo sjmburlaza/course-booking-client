@@ -1,7 +1,7 @@
 let adminUser = localStorage.getItem("isAdmin");
 let cardFooter;
 
-fetch('http://localhost:4000/api/courses/archive')
+fetch('https://course-booking-v2.herokuapp.com/api/courses/archive')
 	.then(res => res.json())
 	.then(data => {
 
