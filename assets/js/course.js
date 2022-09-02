@@ -18,7 +18,7 @@ fetch(`https://course-booking-v2.herokuapp.com/api/courses/${courseId}`)
     courseDescription.innerHTML = data.description;
     courseImage.innerHTML =
     `
-    <img src="${data.image}" height="300">
+    <img src="${data.image}" height="550" width="100%">
     `
 
     if (token) {
