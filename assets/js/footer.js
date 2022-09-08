@@ -9,7 +9,7 @@ footer.innerHTML =
                 <h3>Info</h3>
                 <ul>
                     <li><a href="#">Applying</a></li>
-                    <li><a href="#">visiting</a></li>
+                    <li><a href="#">Visiting</a></li>
                     <li><a href="#">Giving</a></li>
                 </ul>
             </div>
