@@ -1,3 +1,10 @@
+AOS.init({
+    disable: function() {
+        var maxWidth = 800;
+        return window.innerWidth < maxWidth;
+    },
+});
+
 let navSession = document.querySelector('#indexNav');
 let registerNav = document.querySelector('#registerBtn');
 let userToken = localStorage.getItem('token');
