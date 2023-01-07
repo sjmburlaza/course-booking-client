@@ -112,8 +112,7 @@ video {
 
 .login-container,
 .register-container {
-    background: rgb(2,0,36);
-    background: linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(6,32,89,1) 25%, rgba(9,51,121,1) 51%, rgba(0,212,255,1) 100%);
+    background: url('../images/cb-bg2.jpeg');
     height: 100vh;
 }
 
@@ -122,6 +121,16 @@ video {
     color: #fff !important;
 }
 
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.form-container .card {
+    background: rgba(230,230,250,0.3)
+}
 
 .footer-clean {
     padding:50px 0;
