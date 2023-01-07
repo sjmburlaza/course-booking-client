@@ -10,7 +10,7 @@ addCourse.addEventListener('submit', (e) => {
 
 	let token = localStorage.getItem('token');
 
-	fetch('https://course-booking-v2.herokuapp.com/api/courses', {
+	fetch('http://localhost:4000/api/courses', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

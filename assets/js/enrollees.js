@@ -8,7 +8,7 @@ let courseDescription = document.querySelector('#courseDescription');
 let enrolleesContainer = document.querySelector('#enrolleesContainer');
 
 
-fetch(`https://course-booking-v2.herokuapp.com/api/courses/${courseId}`)
+fetch(`http://localhost:4000/api/courses/${courseId}`)
 .then(res => res.json())
 .then(data => {
 
@@ -23,7 +23,7 @@ fetch(`https://course-booking-v2.herokuapp.com/api/courses/${courseId}`)
     }
 
     for (let enrollee of enrollees) {
-        fetch(`https://course-booking-v2.herokuapp.com/api/users/${enrollee.userId}`, {
+        fetch(`http://localhost:4000/api/users/${enrollee.userId}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

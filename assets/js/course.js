@@ -9,7 +9,7 @@ let courseDescription = document.querySelector('#courseDescription');
 let coursePrice = document.querySelector('#coursePrice');
 let enrollContainer = document.querySelector('#enrollContainer');
 
-fetch(`https://course-booking-v2.herokuapp.com/api/courses/${courseId}`)
+fetch(`http://localhost:4000/api/courses/${courseId}`)
 .then(res => res.json())
 .then(data => {
 
@@ -34,7 +34,7 @@ fetch(`https://course-booking-v2.herokuapp.com/api/courses/${courseId}`)
             const isEnrolledHere = data.enrollees.some(enrollee => userId === enrollee.userId);
     
             if (!isEnrolledHere) {
-                fetch('https://course-booking-v2.herokuapp.com/api/users/enroll', {
+                fetch('http://localhost:4000/api/users/enroll', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

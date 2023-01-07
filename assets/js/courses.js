@@ -3,7 +3,7 @@ let cardFooter;
 let cardBody;
 
 // fetch request to all available courses
-fetch('https://course-booking-v2.herokuapp.com/api/courses')
+fetch('http://localhost:4000/api/courses')
 .then(res => res.json())
 .then(data => {
     let courseData;
