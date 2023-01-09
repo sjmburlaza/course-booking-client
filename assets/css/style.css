@@ -112,7 +112,9 @@ video {
 
 .login-container,
 .register-container {
-    background: url('../images/cb-bg2.jpg');
+    background: rgb(54,1,67);
+    background: linear-gradient(113deg, rgba(54,1,67,1) 0%, rgba(13,131,139,1) 93%, rgba(4,81,101,1) 100%);
+    background-image: url('../images/cb-bg2.jpg');
     height: 100vh;
 }
 
@@ -129,7 +131,7 @@ video {
 }
 
 .form-container .card {
-    background: rgba(230,230,250,0.3)
+    background: rgba(230,230,250,0.3);
 }
 
 .footer-clean {
@@ -211,6 +213,10 @@ video {
         margin-top:10px;
         text-align:center;
     }
+    .form-container .card {
+        min-width: 340px;
+        max-width: 3400px;
+    }
 }
 
 @media only screen and (min-width: 768px) {
@@ -224,6 +230,10 @@ video {
 
     .footer-clean .item.social > a {
         margin-top:40px;
+    }
+    .form-container .card {
+        min-width: 400px;
+        max-width: 400px;
     }
 }
 
